@@ -1,0 +1,117 @@
+#menu_cronograma ul{
+    list-style: none;
+    padding: 0;
+    position:relative;  /* reset do position, não relacionado ao demo, mas bom pra uso geral.  */
+    margin:0;           /* Zeramos as margens e o padding do UL para as células.encostarem     */
+
+    box-sizing: border-box;
+    display: block;
+    /*padding-top: 1rem;*/
+    border-radius: 15px;
+    border: 1px solid #72a1c1;
+}
+
+.cronograma-content nav ul li {
+    margin: 0;                  /* nao queremos espaços ente os blocos.                         */
+    background-color: #1c4866;   /* cor de fundo principal, o "grid" fazemos depois              */
+    box-sizing: border-box;    /* medidas são de borda à borda, o padding não é acrescentado.  */
+    display: inline-block;
+    width: 25%;
+    border: 1px solid white;
+}
+
+.cronograma-content nav li a{
+    text-align: center;
+}
+
+.cronograma-content li p{
+    text-align: center;
+    margin-left: 10px;
+    padding-top: 1.5rem;
+}
+
+#menu_cronograma ul li a h4{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#menu_cronograma ul:first-child{
+    border: 10px solid #72a1c1;
+}
+
+#menu_cronograma ul li:hover {
+    transition: background .4s;
+    background-color: #45b6fe;
+    color: #1c4866;
+}
+
+.bloco1, .bloco2{
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.jogos{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+/**/
+.menu-responsivo{
+    display: none;
+}
+
+.botao-expandir{
+    margin: 2rem 0 auto;
+    width: 5rem;
+    height: 4rem;
+    display: none;
+}
+
+/*.cronograma-content{
+    display: none;
+}*/
+
+@media screen and (max-width: 550px) {
+    :not(.recolhido) .menu-responsivo{display: block;}
+    
+    .recolhido .menu-responsivo{
+        display: none;
+    }
+
+    .menu-responsivo ul li{
+        margin: 0;                  
+        background-color: #1c4866; 
+        display: table-cell;
+        width: 25%;
+        border: 1px solid white;
+        font-size: 5px;
+    }
+
+    .menu-responsivo ul li a h4{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .menu-responsivo li p{
+        text-align: center;
+        margin-left: 10px;
+        padding-top: 1.5rem;
+    }
+
+    nav li a{
+        text-align: center;
+    }
+
+    #menu_cronograma{
+        display: none;
+    }
+
+}
